@@ -29,9 +29,8 @@ namespace People.Service
             // TODO 9 : Utiliser l'IOC (le container) fourni de base par asp.net core
             // TODO 9-4 : Configurer le container pour lier l'interface IPeopleProvider à la classe concrète HardCodedPeopleProvider en utilisant la méthode AddSingleton de services
             // TODO 9-5 : Vérifier que le service web People.Service retourne toujours les résultats
-            
+            services.AddSingleton<IPeopleProvider, HardCodedPeopleProvider>();
         }
-
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {

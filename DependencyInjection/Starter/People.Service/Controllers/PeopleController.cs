@@ -11,14 +11,14 @@ namespace People.Service.Controllers
     public class PeopleController : ControllerBase
     {
         IPeopleProvider _provider;
-
         // TODO 9-1 : Déclarer un paramètre supplémentaire au contructeur de type IPeopleProvider
         // TODO 9-2 : Commenter la ligne de code qui créé le provider
         // TODO 9-3 : Et affecter à _provider, le nouveau paramètre du constructeur
 
-        public PeopleController()
+        public PeopleController(IPeopleProvider container)
         {
-            this._provider = new HardCodedPeopleProvider();
+            //this._provider = new HardCodedPeopleProvider();
+            _provider = container;
         }
 
         // GET /people

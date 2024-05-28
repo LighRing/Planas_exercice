@@ -2,13 +2,19 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Ninject" Version="3.3.6" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\PeopleViewer.Presentation\PeopleViewer.Presentation.csproj" />
     <ProjectReference Include="..\PeopleViewer.View\PeopleViewer.View.csproj" />
+    <ProjectReference Include="..\PersonReader.Caching\PersonReader.Caching.csproj" />
+    <ProjectReference Include="..\PersonReader.CSV\PersonReader.CSV.csproj" />
     <ProjectReference Include="..\PersonReader.Service\PersonReader.Service.csproj" />
   </ItemGroup>
 

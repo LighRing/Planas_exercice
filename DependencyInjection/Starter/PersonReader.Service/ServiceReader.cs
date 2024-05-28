@@ -8,7 +8,7 @@ namespace PersonReader.Service
     // TODO 1 : Implementer le design pattern Repository pattern. Cela va découpler la couche "03-Data Access" de la couche "02-Presentation"
     // TODO 1-1 : Click droit sur le nom de la classe (ServiceReader) et sélectionez "Quick action and Refactoring..." then "Extract Interface"
     // TODO 1-2 : Nommer l'interface IRepository et laisser les autres valeur par défaut
-    public class ServiceReader
+    public class ServiceReader : IRepository
     {
         WebClient client;
         string baseUri;
@@ -36,6 +36,7 @@ namespace PersonReader.Service
 
     // TODO 4 : Faire en sorte que l'application utilise un repository csv
     // TODO 4-1 : Inclure le projet PersonReader.CSV sous le dossier "03-Data Access" (Add/Existing project)
+
 
     // TODO 5 : Implémenter un système de cache
     // TODO 5-1 : Inclure le projet PersonReader.Caching sous le dossier "03-Data Access" (Add/Existing project)
